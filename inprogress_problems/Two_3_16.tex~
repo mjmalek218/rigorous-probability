@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\textbf{Exercise Number: 2.3.16}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} The extension constructed in the proof of Theorem 2.3.1 must be complete, meaning that if $A \in mathcal{M}$ then any $B \subset A \in \mathcal{M}$. 
+
+\bigskip
+
+\noindent \textbf{Proof.} Consider any such $A$ and $B$. Then in the case where 
+
+
+
+\end{document}

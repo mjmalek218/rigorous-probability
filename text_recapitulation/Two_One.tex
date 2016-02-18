@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+
+\title{Logic of Science 2.1 NOTES: The Product Rule}
+
+\maketitle 
+
+
+
+\medskip 
+
+%%%%%%%%%%%%%%%%%%%%% Summary %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+\noindent This particular subsection discusses the derivation of the product rule, a result regarding computing the plausibility of a given proposition given the plausibilities of the only other propositions that matter in the computation (when viewed from a logical perspective). 
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%% End Summary %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+
+\noindent \textbf{}
+
+In chapter one the desiderata of our robot were established, as well as basic facts/notation regarding the logic we will use to derive further results. In this subsection we start off with the basic question: how do we compute the plausibility of a proposition such as $AB$ \footnote{In the text computation of $AB|C$ is discussed: for the time being $|C$ seems to be a superfluous detail} (where $A$ and $B$ happen to be arbitrary propositions). 
+
+First, we determine what information would be useful to the computation of this proposition. Through a meticulous derivation perhaps lacking in rigor, a mathematician/logician mentioned in the text determines one and only one of the following pairs of propositions could be useful: $\{A|B, B\}$, $\{B|A, A\}$. In the text, Jaynes asserts that it is a consequence of the consistency of the robot (desideratum III) that both sets of information are equally useful to the robot: I personally don't find this obvious, as the sets of information could come in entirely different forms. Perhaps what he meant here was that these are both valid and comprehensive sets of information to determine the joint plausibility. 
+
+Now define a function $F[A|B, B]$ which takes the given useful information and outputs the plausibility of $AB$: the joint proposition. Applying associativity/commutativity of the logical products to this yields (remembering that propositions here are ``essentially'' real numbers):
+
+\[ABC = F[AB|C, B|C] = F[F[A|C, B|AC], B|C] = F[]. \]
+
+Here we are imposing the conditions of consistency as well on our function: using $AB$ vs $BC$ as the way of breaking down the proposition to manageable components should yield the same results regardless. They key point to note here is the following: \emph{We are not saying that determining the plausibilities of a pair of useful conditional propositions will not necessarily be harder or easier than another pair, but that given equal corresponding plausibilities for the pairs, the function should output to the same number.} In this vein it is important to keep in note that the function is just a mapping $\mathbb{R} \times \mathbb{R} \to \mathbb{R}$. 
+
+\end{document}

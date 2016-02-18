@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{2.2.5} \textbf{Proposition.} Define \[\mathcal{B}_0 = \{\text{all finite unions of elements of J}\}\] where $J$ is defined as in the previous problem, being the collection of all intervals over $[0,1]$. Then $\mathcal{B}_0$ is an algebra but not a sigma algebra.
+
+\medskip
+
+\noindent \textbf{Proof.} Obviously $\emptyset$ and $\Omega$ are members. Now consider any two elements $A, B \in J$. Their intersection will be an intersection of intervals...since everything is finite it checks out. Also obviously closed under complements
+
+The interest problem comes in proving that it is NOT a sigma algebra. For this we need to dig into our bag of tricks, so to speak. To prove this, we must demonstrate there exists a countable union of elements of $\mathcal{B}_0$ that is not a finite union of elements of $\mathcal{J}$: in other words, that it is not closed under the $\sigma$-algebra operations. Consider the set $\{ \frac{1}{n} \mid n \in \mathbb{N} \}$. This set must be in the corresponding sigma algebra but it is clearly not a finite union of intervals of the $[0,1]$. 
+
+\hfill $\Box$
+
+\end{document}

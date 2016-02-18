@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 2.3.16}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} The extension constructed in the proof of Theorem 2.3.1 must be complete, meaning that if $A \in \mathcal{M}$, $P^*(A) = 0$, then any $B \subset A \in \mathcal{M}$. 
+
+\bigskip
+
+\noindent \textbf{Proof.} Consider any such $A$ and $B$. We have by monotonicity that \[P^*(E) \leq P^*(B \cap E) + P(B^c \cap E)\] we just need to prove the reverse direction. Since we are given $A \in \mathcal{M}$ we have \[P^*(E) = P^*(A \cap E) + P(A^c \cap E) = P^*(A^c \cap E) \leq P^*(B^c \cap E) \leq P^*(E). \] But because $P^*(A \cap E) = P^*(B \cap E) = 0$ (by monotonicity so 0 is the min value of this function), the proof is complete. 
+
+\hfill $\Box$
+
+\end{document}
