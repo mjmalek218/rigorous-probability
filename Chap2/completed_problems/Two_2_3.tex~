@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\begin{document}
+
+\noindent \textbf{2.2.3} 
+
+\smallskip
+
+\textbf{Proposition.} Consider $\mathcal{J} = \{ \text{All intervals contained in} [0,1] \}$, where ``intervals'' includes all open/closed/half-open/singleton intervals. Then $\mathcal{J}$ is a semi-algebra. 
+
+\medskip
+
+\noindent \textbf{Proof.} A semi-algebra has three components:
+
+\begin{enumerate}
+
+\item Includes $\Omega$ and $\emptyset$
+
+\item Closed under finite intersection
+
+\item Complement of any element is equal to a finite disjoint union of elements of $J$
+
+\end{enumerate}
+
+The first is obvious. The second follows from an inductive argument, since intersections are an associative operation, just realize that the intersection of any two intervals is itself an interval. Lastly, consider the complement of any interval. This itself leads to two other intervals, which must be disjoint. 
+
+The disjoint union here has to do with double counting. In other words, the only way the complement of the set could be a disjoint union of elements of $J$ is if there were no couble counting...but this actualyl isn't true either...
+
+\bigskip
+
+\noindent \textbf{Proposition.} Define \[\mathcal{B}_0 = \{\text{all finite unions of elements of J}\}\] where $J$ is defined as in the previous problem, being the collection of all intervals over $[0,1]$. Then $\mathcal{B}_0$ is an algebra but not a sigma algebra.
+
+\medskip
+
+\noindent \textbf{Proof.} Obviously $\emptyset$ and $\Omega$ are members. Now consider any two elements $A, B \in J$. Their intersection will be an intersection of intervals...since everything is finite it checks out.
+
+The interest problem comes in proving that it is NOT a sigma algebra. 
+
+\end{document}

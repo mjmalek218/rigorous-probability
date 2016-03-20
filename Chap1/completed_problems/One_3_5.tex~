@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\textbf{Exercise Number:   }  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} 
+
+\bigskip
+
+\noindent \textbf{Proof.{
+
+
+
+\end{document}
