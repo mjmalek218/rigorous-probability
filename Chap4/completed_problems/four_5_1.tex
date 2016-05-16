@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 4.5.1}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Let $(\Omega, \mathcal{F}, \mathbb{P})$ be the Lebesgue measure on $[0,1]$ and set \[X(\omega) = \begin{cases}
+                                    1, \;\; 0 \leq \omega \leq 1/4 \\
+                                    2\omega^2, \;\; \frac{1}{4} \leq \omega \leq 3/4 \\
+                                    \omega^2, \;\; \frac{3}{4} \leq \omega \leq 1 \\
+                                    \end{cases}.\] Then 
+
+\begin{enumerate}
+
+\item $\mathbb{P}(X \in A) = \frac{1}{4} + \sqrt{\frac{1}{2}}$ if $A = [0,1]$. 
+
+\item $\mathbb{P}(X \in A) = \frac{3}{4}$  if $A = [\frac{1}{2}, 1]$.
+
+\end{enumerate}
+
+\bigskip
+
+\noindent \textbf{Proof.} This is just a matter of bookkeeping. Since the Lebesgue measure of
+intervals is just their length, our job is simple in this case. We calculate the cases in the
+order they were presented.  
+
+\begin{enumerate}
+
+\item $\mathbb{P}(X \in A) = X^{-1}([0,1]) = 1 - X^{-1}(\mathbb{R} \setminus [0,1])$. Looking at 
+the definition of $X$ quickly revels that the only portion that maps to outside 1, maps above it:
+for $2\omega^2$. Since it is monotonically increasing just set \[2\omega^2 = 1 \;\; \Rightarrow \;\; \omega = \sqrt{\frac{1}{2}}.\] Thus \[\mathbb{P}(X \in A) = 1 - (\frac{3}{4} - \sqrt{\frac{1}{2}}) = \frac{1}{4} + \sqrt{\frac{1}{2}}.\] 
+
+\item In the second case we choose to calculate directly rather than via complement for convenience. \[\mathbb{P}(X \in A) = X^{-1}([\frac{1}{2},1]) = (\frac{1}{4} - 0) + (\frac{3}{4} - \frac{1}{2}) + (1 - \frac{3}{4}) = 3 * \frac{1}{4} = \frac{3}{4}.\] 
+
+\end{enumerate}  
+
+
+\hfill $\Box$
+
+
+\end{document} 
