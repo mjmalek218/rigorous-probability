@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
 
 \begin{document}
 
@@ -13,7 +14,7 @@
 
 \bigskip
 
-\noindent \textbf{Proof.} Consider any such $A$ and $B$. We have by monotonicity that \[P^*(E) \leq P^*(B \cap E) + P(B^c \cap E)\] we just need to prove the reverse direction. Since we are given $A \in \mathcal{M}$ we have \[P^*(E) = P^*(A \cap E) + P(A^c \cap E) = P^*(A^c \cap E) \leq P^*(B^c \cap E) \leq P^*(E). \] But because $P^*(A \cap E) = P^*(B \cap E) = 0$ (by monotonicity so 0 is the min value of this function), the proof is complete. 
+\noindent \textbf{Proof.} Consider any such $A$ and $B$. We have by monotonicity that \[P^*(E) \leq P^*(B \cap E) + P(B^c \cap E)\] we just need to prove the reverse direction. Since we are given $A \in \mathcal{M}$ we have \[P^*(E) = P^*(A \cap E) + P(A^c \cap E) = P^*(A^c \cap E) \leq P^*(B^c \cap E) \leq P^*(E). \] But because $P^*(A \cap E) = P^*(B \cap E) = 0$ (by monotonicity 0 is the min value of this function), the proof is complete. 
 
 \hfill $\Box$
 

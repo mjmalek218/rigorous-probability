@@ -198,17 +198,23 @@ To demonstrate that Lemma 2.3.13 will hold even for non-disjoint sets, consider 
 
 \noindent \textbf{Lemma 2.3.15} $\mathcal{J} \subseteq \mathcal{M}$. 
 
-
-% FINISH THIS PROOF FINISH THIS PROOF
-
 \medskip
+
+\noindent \textbf{Proof.} Consider any $J \in mathcal{J}$. We must demonstrate that for any set $E \substeq \Omega$, we have \[P^*(J^c \cap E) + P^*(J \cap E) = P(E).\] This in turn means that we must have 
+
+\bigskip 
 
 \noindent \textbf{Extension Theorem} *The original theorem stated at the beginning of this subsection*
 
 
 \section{Constructing the Uniform[0,1] distribution}
 
-We can now apply the previous result 
+We apply the extension theorem to an example set which will be used often throughout the text: the 
+$[0,1]$ interval. 
+
+An important concept that must be brought up is that of the Borel Sets.
+
+\noindent \textbf{Definition.} For any given sample space $\Omega$, the \underline{Borel $\sigma$-algebra} of sets is the smallest sigma algebra containing the intervals of $\Omega$, or $\sigma(\mathcal{J}$). We denote this $\sigma$-algebra as $\mathcal{B}$. 
 
 
 \section{Extensions of the Extension Theorem}
@@ -217,6 +223,6 @@ In general, we will generally be using the Extension Theorem to verify the exist
 
 \bigskip
 
-\noindent \textbf{Corollary 2.5.1} Let $\mathcal{J}$ be a semi-algebra of subsets of $\Omega$. Let $P \: : \: \mathcal{J} \to [0,1]$ with $P(\emptyset) = 0$ and $P(\Omega) = 1$ satisfying the finite superadditivity property of the original extension theorem, as well as the property \[P(A) \leq P(B) \;\; \text{whenever} \;\; A,B \in \mathcal{J} \;\; \text{with} \;\; A \subseteq B\] and also the ``countable subadditivity property on $\mathcal{J}$'' where \[P\Big(\cup_{} )\Big) \]
+\noindent \textbf{Corollary 2.5.1} Let $\mathcal{J}$ be a semi-algebra of subsets of $\Omega$. Let $P \: : \: \mathcal{J} \to [0,1]$ with $P(\emptyset) = 0$ and $P(\Omega) = 1$ satisfying the finite superadditivity property of the original extension theorem, as well as the property \[P(A) \leq P(B) \;\; \text{whenever} \;\; A,B \in \mathcal{J} \;\; \text{with} \;\; A \subseteq B\] and also the ``countable subadditivity property on $\mathcal{J}$'' where \[P\Big(\cup )\Big) \]
 
 \end{document}

@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 2.6.1.}
+
+\medskip 
+
+\noindent The setup is as follows. We are attempting to translate coin tossing into a measure-theoretic framework. In the case of finite number of coin tosses, say $n$, this translates simply into 
+binary sequences of $n$ tuples, with tails being $0$ and heads being $1$, i.e.: \[\Omega_n = \{(r_1, r_2, ..., r_n) \mid r_i \in \{0,1\}\}.\] Since these are finite sets, we can simply define $\mathcal{F} = \mathcal{P}(\Omega))$, i.e. the power set. Finally the probability measure for any $A \in \mathcal{F}$ follows as $\mathbb{P}(A) = |A| / 2^n$. 
+
+However...what happens in the limit as $n$ grows to infinity? Now defining $\mathcal{F}$ in a suitable manner is no longer trivial, and so what to do about $\mathbb{P}$ is as unknown as its domain. 
+The book proposes to utilize the extension theorem with a semi-algebra defined as follows: \[\mathcal{J} = \{A_{a_1 a_2 \cdots a_n} ; n \in \mathbb{N} \; \text{and} \; a_1, a_2, \cdots, a_n \in \{0,1\}\} \cup \{\emptyset, \Omega\}\] where $A_{a_1 a_2 \cdots a_n} = \{(r_1, r_2, ..., ) \mid r_i = a_i \; \text \; 1 \leq i \leq n\}$.
+
+\medskip
+
+\noindent \textbf{Proposition.}  
+
+\bigskip
+
+\noindent \textbf{Proof.}
+
+
+
+\end{document} 
