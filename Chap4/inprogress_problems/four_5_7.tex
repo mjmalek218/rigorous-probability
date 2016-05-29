@@ -20,7 +20,7 @@
 
 \noindent \textbf{Proof.} To prove the general inclusion-exclusion formula efficiently, we exploit
 a convenient trick. We write $P(A_1 \cup \cdots \cup A_n)$ in a convenient form (expectation combined with indicator variables), and then expand it into two different forms, applying the expectation
-differently. A trivial result of expectation/indicator vairables is the following: $\mathbb{E}(1_A) = \mathbb{P}(A)$. Thus, we have \[\mathbb{P}(A_1 \cup \cdots \cup A_n) = \mathbb{E}(1_{A_1 \cup \cdots \cup A_n}) = \mathbb{E}(1 - 1_{(A_1 \cup \cdots \cup A_n)^c}) = \mathbb{E}(1 - 1_{A_1^c \cap \cdots \cap A_n^c})  =  \]
+differently. A trivial result of expectation/indicator vairables is the following: $\mathbb{E}(1_A) = \mathbb{P}(A)$. Thus, we have \[\mathbb{P}(A_1 \cup \cdots \cup A_n) = \mathbb{E}(1_{A_1 \cup \cdots \cup A_n}) = \mathbb{E}(1 - 1_{(A_1 \cup \cdots \cup A_n)^c}) = \mathbb{E}(1 - 1_{A_1^c \cap \cdots \cap A_n^c})  = \mathbb{E}\big(1 -  \Pi_{i = 1}^n(1 - 1_{A_i}) \big).\] Now focusing on $1 -  \Pi_{i = 1}^n(1 - 1_{A_i})$, we may rewrite it as: \[1 -  \Pi_{i = 1}^n(1 - 1_{A_i}) = (1 - 1_{A_1})(1 - 1_{A_2})(1 - 1_{A_3}) \cdots (1 - 1_{A_n}).\] But notice that all the terms of the sum (when all the components of the product are multiplied out) is essentially just \[\Bigg( \sum_{\forall S \in \mathcal{P}(\{1,\cdots,n\})} (-1)^{|S|}\Big( \Pi_{\forall s \in S} 1_{A_s} \Big) \Bigg) \] 
 
 
 \end{document} 
