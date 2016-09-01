@@ -1,0 +1,50 @@
+\documentclass{article}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 4.5.8}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Let $f(x) = ax^2 + bx + c$ be a second-degree polynomial function (where $a,b,c \in \mathbb{R}$ are constants). 
+
+\begin{enumerate}
+
+\item $b = c = 0$ are necessary and sufficient conditions such that, for all $\alpha \in \mathbb{R}$ and all random variables $X$, $\mathbb{E}[f(\alpha X)] = \alpha ^2 \mathbb{E}[f( X)]$. 
+
+\item $a = b = 0$ are necessary and sufficient conditions such that, for all $\alpha \in \mathbb{R}$ and all random variables $X$, $\mathbb{E}[f(X - \beta )] = \mathbb{E}[f(X)]$. 
+
+\item Not sure what this question is asking... 
+
+\end{enumerate}
+
+\bigskip
+
+\noindent \textbf{Proof.} These conclusions follow directly from linearity of expecation. 
+
+\begin{enumerate}
+
+\item \[\mathbb{E}[f(\alpha X)] = \mathbb{E}[a * (\alpha X)^2 + b \alpha X + c] \]
+
+      \[= \alpha^2 \mathbb{E}[a X^2] + \alpha \mathbb{E}[ b X] + c.\]
+    
+      From the above it is clear that both $b$ and $c$ must be 0 for the desired condition to hold.
+
+\item \[\mathbb{E}[f(X - \beta)] = \mathbb{E}[a * (X - \beta)^2 + b (X - \beta) + c ]\]
+
+      \[= a * \mathbb{E}[(X^2 - 2 \beta X + \beta^2)] + b * \mathbb{E}[ (X - \beta)] + c\]
+
+      Which clearly only equals the original expectation, in general, if $a = b = 0$, as
+     that is the only way to disentangle the $X$ and $\beta$ terms. 
+
+\end{enumerate}
+
+\hfill $\Box$
+
+\end{document} 
