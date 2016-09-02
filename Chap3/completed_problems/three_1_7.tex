@@ -1,0 +1,35 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 3.1.7}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Consider a sequence of random variables $\{Z_n\}$ over an arbitrary probability triple (standard notation) such that $\lim_{n \to \infty} Z_n(\omega)$ exists. Set this equal to a new function $Z: \Omega \to \mathbb{R}$, i.e. \[\lim_{n \to \infty} Z_n(\omega) = Z(\omega) \;\; \forall \omega \in \Omega .\] Then the following holds true: 
+
+\[\{Z \leq x\} = \bigcap_{m = 1}^\infty \bigcup_{n = 1}^\infty \bigcap_{k = n}^\infty \Bigg \{ Z_k \leq x + \frac{1}{m} \Bigg\} \]
+
+\bigskip
+
+\noindent \textbf{Proof.} We prove this by demonstrating these two propositions are saying
+exactly the same thing. In this sense, there really is no proof to be had: just deconstruction
+of the statements. 
+
+\bigskip
+
+\noindent \underline{$\{Z \leq x\}$:} Writing this statement out more verbosely, we find it is equivalent to \[ \{\omega \in \Omega \mid \lim_{n \to \infty} Z_n(\omega) \leq x.\} \] By definition, this is the set of all $\omega \in \Omega$ such that for all $\epsilon > 0$, there exists $N \in \mathbb{Z}$ such that for all $k \geq N$, $Z_k(\omega) \leq x + \epsilon$. 
+
+\bigskip
+
+\noindent \underline{$\bigcap_{m = 1}^\infty \bigcup_{n = 1}^\infty \bigcap_{k = n}^\infty \Bigg \{ Z_k \leq x + \frac{1}{m} \Bigg\}$:} We examine this statement from inside out. Consider first of all \[\bigcup_{n = 1}^\infty \bigcap_{k = n}^\infty \Bigg \{ Z_k \leq x + \frac{1}{m} \Bigg\}.\] As discussed later in the chapter, this is equivalent to \[\lim_n \inf \Bigg \{  Z_k \leq x + \frac{1}{m} \Bigg \}  = \Bigg \{ Z_k \leq x + \frac{1}{m}, \;\; a.a. \Bigg \}.\] The ``almost always'' implies that, past a certain finite point in the sequence, the condition must hold true for all subsequent elements in the sequence. In otherwords, we may restate this set as: the set of all $\omega \in \Omega$ such that there exists $N \in \mathbb{Z}$ such that for all $k \geq N$, $Z_k(\omega) \leq x + \frac{1}{m}$. Now we peal back the last layer: the $\frac{1}{m}$. Taking the intersection over all $m \in \mathbb{N}$ means that, if an $\omega$ is to be included in the final set, it must satisfy the above condition over all $m$: that is, no matter how arbitrarily small $\frac{1}{m}$ becomes, the inequality must still be satisfied. 
+
+So now it is easy to see why the statements are equivalent: consider any $\omega \in \{Z \leq x\}$. Then since the rationals are dense in the reals, for any $\epsilon > 0$ there exists $m$ s.t. $\epsilon < \frac{1}{m}$. The reverse obviously holds as well, so both sets are subsets of one another, meaning that they are equal.
+
+\hfill $\Box$
+
+\end{document} 
