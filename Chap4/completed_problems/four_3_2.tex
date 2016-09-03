@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 4.3.2}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Let $X$ and $Y$ be two general random variables (not necessarily non-negative) with well-defined means, such that $X \leq Y$. Then 
+
+\begin{enumerate}
+
+\item $X^+ \leq Y^+$ and $X^- \geq Y^-$.
+
+\item Expectation is still order-preserving: i.e. $\mathbb{E}(X) \leq \mathbb{E}(Y)$ under these assumptions. 
+
+\end{enumerate}
+
+\bigskip
+
+\noindent \textbf{Proof.} The proposition implies that $\forall \omega \in \Omega$, $X(\omega) \leq Y(\omega)$. So obviously if we restrict to positive and negative ranges of these functions, the first result follows. 
+
+The second portion of the proposition just follows from the order preserving property of non-negative random variables applied to the first portion: $\mathbb{E}(X^+) \leq \mathbb{E}(Y^+)$ and $\mathbb{E}(X^-) \geq \mathbb{E}(Y^-)$ and so by definition of general expectation the result holds. 
+
+\hfill $\Box$
+
+
+
+\end{document} 
