@@ -1,0 +1,43 @@
+\documentclass{article}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 4.5.3}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Let $X$ and $Y$ be two general random variables with finite means, and let $Z = X + Y$. 
+
+\begin{enumerate}
+
+\item $Z^+ - Z^- = X^+ - X^- + Y^+ - Y^-$. 
+
+\item $\mathbb{E}(Z) = \mathbb{E}(X) + \mathbb{E}(Y)$
+
+\item The general definition of expectation is finitely linear, for general random variables with finite means. 
+
+\end{enumerate}
+
+\bigskip
+
+\noindent \textbf{Proof.} Proven in the order presented.  
+
+\begin{enumerate}
+
+\item Follows by definition of expectation. 
+
+\item We may re-arrange the first relation to write \[Z^+ + X^- + Y^- = X^+  + Y^+ + Z^+.\] Since these are positive random variables with positive coefficients, we may apply the result of equation 4.2.6 of the chapter to write \[\mathbb{E}(Z^+) + \mathbb{E}(X^-) + \mathbb{E}(Y^-) = \mathbb{E}(X^+)  + \mathbb{E}(Y^+) + \mathbb{E}(Z^+)\] which through trivial re-arranging gives the desired result. 
+
+\item From (2) it is clear as to why this general definition of expectation is finitely linear. Consider any arbitrary linear combination of random variables $X_i$ with scalars $a_i$: $Z = \sum_{i = 1}^n a_i X_i$. If any of the scalars are negative, we may simply switch them to the other side of the equation and apply the same logic as in (2): all that is needed is positive scalar multiples. 
+
+\end{enumerate}
+
+\hfill $\Box$
+
+\end{document} 
