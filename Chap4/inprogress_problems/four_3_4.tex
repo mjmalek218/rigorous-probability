@@ -4,23 +4,23 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[margin = .5in]{geometry}
-
+\usepackage{enumerate}
 
 \begin{document}
 
-\noindent \textbf{Exercise Number: 4.5.3}  %% FILL THIS IN
+\noindent \textbf{Exercise Number: 4.3.4}  %% FILL THIS IN
 
 \medskip 
 
-\noindent \textbf{Proposition.} Let $X$ and $Y$ be two general random variables with finite means, and let $Z = X + Y$. 
+\noindent \textbf{Proposition.} Let $X$ and $Y$ be two general independent random variables with finite means, and let $Z = XY$. Then the following holds true:
 
-\begin{enumerate}
+\begin{enumerate}[(a)]
 
-\item $Z^+ - Z^- = X^+ - X^- + Y^+ - Y^-$. 
+\item $X^{\#_x}$ and $Y^{\#_y}$ are independent, where $\#_x, \#_y \in \{+,-\}$
 
-\item $\mathbb{E}(Z) = \mathbb{E}(X) + \mathbb{E}(Y)$
+\item $Z^+ = X^+ Y^+ + X^- Y^-$ and  $Z^- = X^- Y^+ + X^+ Y^-$
 
-\item The general definition of expectation is finitely linear, for general random variables with finite means. 
+\item $\mathbb{E}(Z) = \mathbb{E}(X)  \mathbb{E}(Y)$. 
 
 \end{enumerate}
 
@@ -30,14 +30,22 @@
 
 \begin{enumerate}
 
-\item Follows by definition of expectation. 
+\item Consider any two borel sets $B_x, B_y \subseteq \mathbb{R}$. We are given that \[\mathbb{P}[X^{-1}(B_x) \cap Y^{-1}(B_y)] = \mathbb{P}[X^{-1}(B_x)] \mathbb{P}[Y^{-1}(B_y)].\] Now consider \[X^{-1}(B_x) = (X^+ - X^-)^{-1}(B_x).\] The claim is this may be broken up into the union of 
 
-\item We may re-arrange the first relation to write \[Z^+ + X^- + Y^- = X^+  + Y^+ + Z^+.\] Since these are positive random variables with positive coefficients, we may apply the result of equation 4.2.6 of the chapter to write \[\mathbb{E}(Z^+) + \mathbb{E}(X^-) + \mathbb{E}(Y^-) = \mathbb{E}(X^+)  + \mathbb{E}(Y^+) + \mathbb{E}(Z^+)\] which through trivial re-arranging gives the desired result. 
-
-\item From (2) it is clear as to why this general definition of expectation is finitely linear. Consider any arbitrary linear combination of random variables $X_i$ with scalars $a_i$: $Z = \sum_{i = 1}^n a_i X_i$. If any of the scalars are negative, we may simply switch them to the other side of the equation and apply the same logic as in (2): all that is needed is positive scalar multiples. 
+\item Fairly straight forward: details fairly trivial here. $Z^+$ is going to on the omega where both $X$ and $Y$ are positive or negative: sinceit is defined as a product. When one omega maps both to negative, $X^+ Y^+$ is 0 and vice versa, allowing the desired result. Same logic applies to $Z^-$.
+ 
+\item Just apply the results 
 
 \end{enumerate}
 
 \hfill $\Box$
+
+
+\bigskip
+
+\noindent \textbf{DISCUSSION:} The point of this proposition (and the previous one) is that
+this new general definition of expectation which involves its decomposition into negative/positive
+components really does not change the properties of expectation that had been previously examined
+...in a ``finite'' setting. 
 
 \end{document} 
