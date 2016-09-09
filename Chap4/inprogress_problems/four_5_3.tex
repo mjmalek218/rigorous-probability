@@ -16,14 +16,12 @@
 
 \bigskip
 
-\noindent \textbf{Proof.} Recall the definition of expected value for a general random variable: \[\mathbb{E}(X) = \mathbb{E}(X^+) - \mathbb{E}(X^-)\] where $X^+ = \max(X,0)$ and $X^- = \max(X,0)$. The latter expectation function employed, defined for random, non-negative variables (say $Y$ in this case) is \[\mathbb{E}(Y) = \sup\{\mathbb{E}(Y) \mid \text{all simple random variables }  Y \leq X\}.\] And the expectation function employed in the final case (of simple random variables mapping to $n$ distinct numbers) amounts to: \[\mathbb{E}(Y) = \sum_{i = 1} y_i 1_{A_i} \] where $A_i \in \mathbb{F}$ is the set such that $Y^{-1}(y_i) = A_i$.
-
-Actually, this problem is simply a simple matter of logic. First consider the case $\mathbb{E}(X) \geq a$. Then evidently $\max(\mathbb{E}(X), a) = \mathbb{E}(X)$. Thus we want to show that \[\mathbb{E}(\max(X,a)) \geq \mathbb{E}(X) \geq a.\] Now we exploit the order preservation property of expectation (result of exercise 4.3.2). Define a random variable \[Z(\omega) = \begin{cases} a, \;\; \text{if} \;\; X(\omega) < a \\ X(\omega), \; \;\text{otherwise}.\\ \end{cases}\] Then note that $Z \geq X$ and therefore $E(\mathbb{Z}) > E(\mathbb{X})$. But $Z = \max(X,a)$, completing the first
+\noindent \textbf{Proof.} First consider the case $\mathbb{E}(X) \geq a$. Then evidently $\max(\mathbb{E}(X), a) = \mathbb{E}(X)$. Thus we want to show that \[\mathbb{E}(\max(X,a)) \geq \mathbb{E}(X) \geq a.\] Now we exploit the order preservation property of expectation (result of exercise 4.3.2). Define a random variable \[Z(\omega) = \begin{cases} a, \;\; \text{if} \;\; X(\omega) < a \\ X(\omega), \; \;\text{otherwise}.\\ \end{cases}\] Then note that $Z \geq X$ and therefore $\mathbb{E}(Z) > \mathbb{E}(X)$. But $Z = \max(X,a)$, completing the first
 portion of the proof. 
 
+\medskip
 
-
-Proving the second case, $\mathbb{E}(X) < a$, follows a similar line of argument 
+\noindent Proving the second case, $\mathbb{E}(X) < a$, follows a similar but reversed line of argument. 
 
 \hfill $\Box$
 
