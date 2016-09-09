@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 3.6.4}  %% FILL THIS IN
+
+\bigskip
+
+\noindent \textbf{Proposition.} Suppose $\{A_n\} \nearrow A$. Let $f \colon \Omega \to \mathbb{R}
+$ be an arbitrary function. Then $\lim_{n \to \infty} \inf_{w \in A_n} f(\omega) = \inf_{\omega \in A} f(\omega)$.
+
+\medskip
+
+\noindent \textbf{Proof.} Consider any $\epsilon > 0$ sufficiently small (explained later, we needn't concern ourselves with larger epsilon by the nature of limits). We must now find an $N \in \mathbb{N}$ such that for all $k \geq N$, \[|\inf_{w \in A_k} f(\omega) - \inf_{\omega \in A} f(\omega)| < \epsilon.\] Consider the set $B = \{\omega \in A \mid f(\omega) \geq \inf_{\omega \in A} f(\omega) + \frac{\epsilon}{2}\}$. We consider $\epsilon$ sufficiently small so that this set is non-empty: such an epsilon must exist by the definition of infimum. Furthermore, since $\cup_n A_n = A$ and the $A_n$ are increasing in size, by assumption, there must exist some index $N$ such that $B \subseteq A_N$. 
+
+\hfill $\Box$
+
+\bigskip
+
+\noindent \textbf{Discussion.} The point here is that this applies to any function mapping an arbitrary sample space $\Omega$ to the real numbers, and so applies to random variables as well. In other words, the limit of the infimum of a random variable over a sequence of increasing sets is just the infimum of that random variable over the limit of the sets. 
+
+\end{document} 
