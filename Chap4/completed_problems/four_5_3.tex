@@ -1,0 +1,28 @@
+\documentclass{article}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 4.5.3}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Let $X$ be a random variable with finite mean, and let $a \in \mathbb{R}$ be any real number. Then $\mathbb{E}(\max(X,a)) \geq \max(\mathbb{E}(X), a)$. 
+
+\bigskip
+
+\noindent \textbf{Proof.} First consider the case $\mathbb{E}(X) \geq a$. Then evidently $\max(\mathbb{E}(X), a) = \mathbb{E}(X)$. Thus we want to show that \[\mathbb{E}(\max(X,a)) \geq \mathbb{E}(X) \geq a.\] Now we exploit the order preservation property of expectation (result of exercise 4.3.2). Define a random variable \[Z(\omega) = \begin{cases} a, \;\; \text{if} \;\; X(\omega) < a \\ X(\omega), \; \;\text{otherwise}.\\ \end{cases}\] Then note that $Z \geq X$ and therefore $\mathbb{E}(Z) > \mathbb{E}(X)$. But $Z = \max(X,a)$, completing the first
+portion of the proof. 
+
+\medskip
+
+\noindent Proving the second case, $\mathbb{E}(X) < a$, follows a similar but reversed line of argument. 
+
+\hfill $\Box$
+
+\end{document} 
