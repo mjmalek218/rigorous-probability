@@ -14,19 +14,29 @@
 
 \bigskip
 
-\noindent \textbf{Proof.} We demonstrate this in several steps, as outlined by the text.
+\noindent \textbf{Proof.} We demonstrate this in several steps, as outlined by the text. Let $I$ have endpoints $a < b$. 
 
 \begin{enumerate}
 
 \item First we demonstrate that if $I_1, I_2, ..., I_n$ is a finite collection of intervals, and if
-$\cup _{j = 1}^n I_j \supseteq I$ for some interval $I$, then $\sum_{j = 1}^n \mathbb{P}(I_j) \geq \mathbb{P}(I)$.
+$\cup _{j = 1}^n I_j \supseteq I$ for some interval $I$, then $\sum_{j = 1}^n \mathbb{P}(I_j) \geq \mathbb{P}(I)$. Since $\cup _{j = 1}^n I_j \supseteq I$, there must exist a subset of intervals $I_{\alpha_j}$ with $a_{\alpha_j} < b_{\alpha_j}$ being the endpoints, indexed by an index set $\alpha_j \in S$, cardinality $k$,  such that \[a_{\alpha_1} \leq a \leq  a_{\alpha_2} \leq b_{\alpha_1} < b_{\alpha_2} \cdots < b \leq b_{\alpha_k}.\] In other words, this subset of intervals encapsulates $I$. Then evidently, \[\mathbb{P}(I) \leq \sum_{j = 1}^k \mathbb{P}(I_{\alpha_j}) \leq \sum_{j = 1}^n \mathbb{P}(I_j).\]
 
-\item 
+\item Applying the Heine-Borel theorem to (1.) yields the result immediately. Heine-Borel is proved below. 
 
-\item
+\item Define new intervals 
 
 \end{enumerate}
 
+
+\bigskip
+
+\bigskip
+
+\noindent \textbf{Lemma.} Heine-Borel theorem. If a colleciton of open-intervals contains a closed interval, then a finite sub-collection of these open intervals must contain the open interval as well. 
+
+\medskip
+
+\noindent \textbf{Proof.} 
 
 
 \end{document} 

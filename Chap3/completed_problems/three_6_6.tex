@@ -46,4 +46,18 @@ Secondly we demonstrate that $\cup A_k = A$. The fact that $\cup A_k \subseteq A
 
 \hfill $\Box$
 
+\bigskip
+
+\noindent \textbf{Discussion.} 
+
+\smallskip
+
+The overall implication of this problem is that if we sum independent random variables, the sum of these random variables retain the exogenous independence properties of their components. The general method of proving this was complex, but after some thought follows as natural from the definition. Looking at it top down...(with the ``scaffolding'' so to speak...)
+
+We wanted to prove that $X + Y$ and $Z$ are independent. In general, random variables are independent if and only if on Borel sets the inverse images are independent. We can construct Borel sets from unbounded lower intervals of numbers (in the spirit of distributions and the original definition of random variables) and, since inverse images of sets preserve all relevant set operations, we work backwards to prove that the inverse functions of $W$ and $Z$ map to .
+
+Then we can break our problem down further: if we demonstrate on an increasing/decreasing sequence of finite sets that the inverse image on these sets is again independent of $D$ (as defined above) then we can apply continuity of probabilities to achieve our final result. In our case it just so happens an increasing sequence was chosen, and is perhaps more natural. 
+
+So essentially, whoever came up with this proof template must have worked backwards in the following manner. The biggest leap in the reverse engineering (top-down approach), in my humble opinion, must have been the the construction of the $B$ and $C$ sets to break down $A_k$ further. But looking at the solution, it seems fairly natural tbh. 
+
 \end{document} 
