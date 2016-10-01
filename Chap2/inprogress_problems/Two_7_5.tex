@@ -19,11 +19,11 @@ the following:
 
 \item $\mathcal{F}$ is an algebra. 
 
-\item $\mathcal{F}$ is a $\sigma$-algebra.
+\item $\mathcal{F}$ is *not* a $\sigma$-algebra.
 
 \item $\mathbb{P}$ is finitely additive. 
 
-\item $$
+\item $\mathbb{P}$ is *not* countably additive. 
 
 \end{enumerate}
 
@@ -35,9 +35,9 @@ the following:
 
 \begin{enumerate}
 
-\item Closure under complements is trivial. Consider any two sets $A, B \in \mathcal{F}$. Note that it is impossible for $A$ and $B$ to both be disjoint and inifnite if they are in $\mathcal{F}$. TO see why, 
+\item Closure under complements is trivial. Consider any two sets $A, B \in \mathcal{F}$. If we prove $A \cap B \in \mathbb{F}$ then by induction and DeMorgan's laws the result follows. The only way $A \cap C \notin \mathbb{F}$ would be if both $A \cap B$ *and* $(A \cap B)^C = A^C \cup B^C$ are both infinite (obviously they cannot both be finite given $\Omega$). Assume $A \cap B$ is infinite. Then at least one of $A$ or $B$ must be as well. If both are infinite, then $A^C \cup B^C$ is clearly finite and the result holds. Now assume WLOG that $A$ is infinite, but $B$ is finite. Then $A \cap B$ is clearly finite, and so consider $(A^C \cup B^C)$. Since $B^C$ is infinite this is infinite. Done. 
 
-\item 
+\item Define $A_n = \{2n\}$. Then clearly each $A_n \in \mathbb{F}$. However both $\cup_{n = 1}^{\infty} A_n$ *and* $\Big(\cup_{n = 1}^{\infty} A_n\Big)^C$ are clearly infinite. 
 
 \item 
 
