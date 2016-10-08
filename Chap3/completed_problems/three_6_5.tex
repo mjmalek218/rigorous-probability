@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 3.6.5}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability triple such that $\Omega$ is *countable*, and $\mathcal{F} = \mathcal{P}(\Omega)$. Then it is imposible for there to be an infinite sequence of independent $A_i \in \mathcal{F}$ such that $\mathbb{P}(A_i) = \frac{1}{2}$ $\forall i$. 
+
+\bigskip
+
+\noindent \textbf{Proof.} Assume on the contrary that such an $\{A_i\}$ exists. We first demonstrate that the set of all $\omega \in \Omega$ occuring infinitely often in the sequence must have measure one. Denote this set as $I$. This follows by Borel-Cantelli (ii), since the $A_i$ are independent and the sum of their probabilities is clearly divergent, and so $\mathbb{P}(\lim \sup A_i) = 1$.
+
+Now note the implication here: for any $\omega \in I$ we must have, for any $n \in \mathbb{N}$, (by the independence property and countable additivity of the measure): \[\mathbb{P}(\omega) \leq \mathbb{P}(\cap_{i=1}^n A_i) = \frac{1}{2^n}.\] But since probabilities are non-negative, this clearly implies $\mathbb{P}(\omega) = 0$. Thus, by countable $n$: \[1 = \sum_{\forall \omega \in I} \mathbb{P}(\omega) \leq 0 * |I| = 0.\] 
+
+\hfill $\Box$  
+
+\bigskip
+
+\bigskip
+
+\noindent \textbf{Discussion.}
+
+One takeaway from this exercise is some intuition concerning the implications of Borel-Cantelli. For any sequence of independent events, in a countable space, the implication here is that the probabilities must probably vary of some sort, and towards 1. For any fixed and bounded fraction, the above argument still applies and we again achieve contradiction.  
+
+Consider, for example, consider the space of an infinite sequence of coin tosses, and let $H_n$ be the event that the $n^{th}$ toss is heads. Then clearly the $H_n$ are independent, and their probabilities are quite small, implying we can bound the product of their probabilities. SO why is there no contradictionby Borel-Cantelli? The answer is because the space is *not* countable. To see why, consider that it is essentially equivalent to the set of all binary sequences: a 1-1 mapping between this and $[0,1]$ exists. 
+ 
+
+
+
+\end{document} 
