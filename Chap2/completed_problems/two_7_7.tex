@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+\usepackage{enumerate}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 2.7.7}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Suppose that $\Omega = [0,1]$ is the set of positive integers 
+and $\mathcal{F}$ is the of all subsets of $A$ such that either $A$ or $A^c$ is countable, and 
+$\mathbb{P}(A) = 0$ if $A$ is countable, and $\mathbb{P}(A) = 1$ if $A^C$ is countable. Then we have the following:
+
+\begin{enumerate}[\textbf{(a)}]
+
+\item $\mathcal{F}$ is an algebra. 
+
+\item $\mathcal{F}$ is a $\sigma$-algebra.
+
+\item $\mathbb{P}$ is finitely additive. 
+
+\item $\mathbb{P}$ is countably additive. 
+
+\end{enumerate}
+
+\bigskip
+
+\noindent \textbf{Proof.}  
+
+\medskip
+
+\begin{enumerate}[\textbf{(a)}]
+
+\item Closure under complements is trivial. Consider any two sets $A, B \in \mathcal{F}$. If we prove $A \cup B \in \mathbb{F}$ then by induction the result follows. There are several cases to consider. Firstly, in the case both are uncountable, we need to demonstrate $(A \cup B)^C$ is countable, since clearly $A \cup B$ is uncountable. By assumption both $A^C$ and $B^C$ must be countable, so note by DeMorgan's laws that: $(A \cup B)^C = A^C \cap B^C$ which is clearly countable. 
+
+\item Consider any countable sequence of events $\{A_n\}$ in our event space. Assume any number of these events were uncountable, and consider one of these uncountable events being $A_j$. Then \[(\cup_{n = 1}^\infty A_n)^C \subseteq A_j^C \] which is countable, so therefore $(\cup_{n = 1}^\infty A_n)^C$ is countable and the countable union of all these events is still a relevant event. 
+
+Now consider the scenario where all the $A_n$ are countable. Again an elementary result of analysis is that the countable union of countable sets is itself countable, so we are still in the clear. Done for (b). 
+
+Incidentally, we have also proved (a) in this, since all algebras are $\sigma$-algebras.
+
+\item Consider any two disjoint set events $A$ and $B$. We first prove a lemma: it is impossible for both $A$ and $B$ to both be infinite. Consider the case where they are. Then since $A^c \supseteq B$ it follows that $A^C$ is infinite as well. Contradiction. 
+
+Now consider all possible combinations of $A$ and $B$ having finite or infinite cardinality. If one has infinite cardinality, the other must be finite and so \[\mathbb{P}(A \cup B) = 1 \;\; \text{and} \;\; \mathbb{P}(A) + \mathbb{P}(B) = 0 + 1 = 1. \] In the second case, if both are finite, then obviously $\mathbb{P}(A \cup B) = 0$ and $\mathbb{P}(A) + \mathbb{P}(B) = 0 + 0$. Done.  
+
+\item Consider any series of disjoint events $\{A_n\}$ in our $\sigma$-algebra. Either the union is countable or uncountable. In the case of it being countable, then obviously each $A_n$ is countable and so \[\sum_{n = 1}^\infty \mathbb{P}(A_n) = \mathbb{P}(\cup_{n = 1}^\infty A_n) = 0. \] The more complex case comes in proving countable additivity of our measure if the union is uncountable. Then by (b) we know \[(\cup_{n = 1}^\infty A_n)^C = (\cap_{n = 1}^\infty A_n^C) \] must be countable, and so \[\mathbb{P}\Big[\cup_{n = 1}^\infty A_n\Big] = 1.\] Furthermore we know at least one of these $A_n$, say $A_j$, must be uncountable and so \[\sum_{n = 1}^\infty \mathbb{P}(A_n) \geq 1.\] The key is to prove equality here.
+
+Now recall that the $A_n$ are disjoint and so we must demonstrate in this case, for all $m \neq j$, $A_m$ is countable: in other words, we need to show that the existence of two disjoint, uncountable sets who complements are countable is a contradiction in $\Omega = [0,1]$. Consider two such hypothetical sets, $B$ and $C$. Since these sets are disjoint, $C \subset B^C$. But $B^C$ is countable by design, and $C$ is uncountable. Contradiction.
+
+Thus \[\sum_{n = 1}^\infty \mathbb{P}(A_n) = 1\] 
+
+and countable additivity is confirmed. 
+
+\end{enumerate}
+
+\hfill $\Box$
+
+\bigskip
+
+\noindent \textbf{Discussion.} 
+
+\medskip
+
+There is a departure here from the previous two problems, with an interesting implication: that when, in an uncountable space, we consider the collection of all events that are countable or whose complement is countable, a different type of small vs big, we actually have grounds for an entirely consistent $\sigma$-algebra as opposed to just an algebra. The analogy is fitting: when we restrict criteria to finite qualities, we have grounds for consitent behavior under finite set operations. When we restrict to countable qualities, we have grounds for consistency under countable numbers of set operations. 
+
+Looking more closely at the details, for the $\sigma$-algebra condition to hold we needed the sets to maintain their behavior under infinite, yet countable, union. In the case of finite sets this obviously would not necessarily follow, since the union of infinite disjoint finite sets cannot hav efinite cardinality. However, countability of a set has a nice property where it maintains its behavior under countable union, and so the sigma algebra structure is maintained. 
+
+For the countable addivity of the measure, this general thread of thought continues: the crux of the derivation is that we cannot have disjoint uncountable sets whose complements are countable, since obviously they would then need to encompass uncountable sets. So in a stream of disjoint sets, we can really only have at most one uncountable set satisfying the $sigma$-algebra condition, and thus the whole is equal to the sum of the parts. 
+
+\end{document}
