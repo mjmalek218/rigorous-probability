@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 2.7.6}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Suppose that $\Omega = [0,1]$ is the set of positive integers 
+and $\mathcal{F}$ is the of all subsets of $A$ such that either $A$ or $A^c$ is finite, and 
+$\mathbb{P}(A) = 0$ if $A$ is finite, and $\mathbb{P}(A) = 1$ if $A^C$ is finite. Then we have
+the following:
+
+\begin{enumerate}
+
+\item $\mathcal{F}$ is an algebra. 
+
+\item $\mathcal{F}$ is *not* a $\sigma$-algebra.
+
+\item $\mathbb{P}$ is finitely additive. 
+
+\item $\mathbb{P}$ is *not* countably additive. 
+
+\end{enumerate}
+
+\bigskip
+
+\noindent \textbf{Proof.}  
+
+\medskip
+
+\begin{enumerate}
+
+\item Closure under complements is trivial. Consider any two sets $A, B \in \mathcal{F}$. If we prove $A \cap B \in \mathbb{F}$ then by induction and DeMorgan's laws the result follows. The only way $A \cap B \notin \mathbb{F}$ would be if both $A \cap B$ *and* $(A \cap B)^C = A^C \cup B^C$ are both infinite (obviously they cannot both be finite given $\Omega$). Assume $A \cap B$ is infinite. Then at least one of $A$ or $B$ must be as well. If both are infinite, then $A^C \cup B^C$ is clearly finite and the result holds. Now assume WLOG that $A$ is infinite, but $B$ is finite. Then $A \cap B$ is clearly finite, and so consider $(A^C \cup B^C)$. Since $B^C$ is infinite this is infinite. Done. 
+
+\item Define $A_n = \{\frac{1}{n}\}$. Then clearly each $A_n \in \mathbb{F}$. However both $\cup_{n = 1}^{\infty} A_n$ *and* $\Big(\cup_{n = 1}^{\infty} A_n\Big)^C$ are clearly infinite. 
+
+\item Consider any two disjoint set events $A$ and $B$. We first prove a lemma: it is impossible for both $A$ and $B$ to both be infinite. Consider the case where they are. Then since $A^c \supseteq B$ it follows that $A^C$ is infinite as well. Contradiction. 
+
+Now consider all possible combinations of $A$ and $B$ having finite or infinite cardinality. If one has infinite cardinality, the other must be finite and so \[\mathbb{P}(A \cup B) = 1 \;\; \text{and} \;\; \mathbb{P}(A) + \mathbb{P}(B) = 0 + 1 = 1. \] In the second case, if both are finite, then obviously $\mathbb{P}(A \cup B) = 0$ and $\mathbb{P}(A) + \mathbb{P}(B) = 0 + 0$. Done.  
+
+\item This follows immediately by consider the sequence of events $A_n = \{\frac{1}{n}\}$: the individual probabilities are all 0, but when taken together they are an infinite set
+
+\end{enumerate}
+
+\hfill $\Box$
+
+\bigskip
+
+\noindent \textbf{Discussion.} 
+
+\medskip
+
+
+Also note the disparity between this exercise and the previous: while this deals with an uncountable set, the previous was on a countable set. But in the result there is no disparity. As long as we define events to be whose cardinality, or the cardinality of its complement, are finite, we get similar results every time. 
+
+The problem is countable additivity and wishing the union of an infinite collection of sets to again be an event we can take probabilities over. When we extend from finite to infinite unions contradictions and holes arise, since we can usually slice an infinity into multiple infinities and get sets which partition infinity into multiple infinities. With countable addivitiy, this property is independent of the order of the infinity we are dealing with (for $\Omega$). 
+
+Note the proofs above are nearly indentical to thsoe in 2.7.5
+
+\end{document}
