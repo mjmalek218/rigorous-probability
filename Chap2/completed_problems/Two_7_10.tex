@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin = .5in]{geometry}
+
+\begin{document}
+
+\noindent \textbf{Exercise Number: 2.7.10}  %% FILL THIS IN
+
+\medskip 
+
+\noindent \textbf{Proposition.} Letting $\Omega = \mathbb{R}$, define
+
+\[\mathcal{J} = \Big\{(-\infty, x] \mid x \in \mathbb{R} \Big\} \cup \Big\{(y, \infty) \mid y \in \mathbb{R} \Big\} \cup \Big\{ (x,y] \mid x,y \in \mathbb{R} \Big\} \cup \Big\{\emptyset, \mathbb{R} \Big\}\]
+
+where the union is taken over ``collections'' of sets (not a union in the strict set-theoretic
+sense, I believe, though I need to learn more rigorous set theory to determine further). 
+
+Then this may be a 
+
+\bigskip
+
+\noindent \textbf{Proof.} Recall the definition of a semi-algebra. $\mathcal{J}$ is a 
+semi-algebra over an event space $\Omega$ if: 
+
+\begin{enumerate}
+
+\item $\Omega$, $\emptyset \in \mathcal{J}$
+
+\item $A,B \in \mathcal{J} \Rightarrow A \cap B \in \mathcal{J}$ (i.e. $\mathcal{J}$ is closed under finite intersection 
+
+\item For any $A \in \mathcal{J}$, $A^C$ is a union of disjoint sets in $\mathcal{J}$ 
+
+\end{enumerate}
+
+As a minor digression, note what this implies about unions in $\mathcal{J}$: consider $A,B \in \mathcal{J}$. Then by DeMorgan's Laws: 
+
+\[A \cap B = (A^C \cap B^C)^C.\] Since $A^C, B^C$ are disjoint unions of sets in $\mathcal{J}$, 
+and $\mathcal{J}$ is closed under intersection, we have that $A^C \cap B^C$ is a disjoint union
+of sets of $\mathcal{J}$. Then taking the complement of this entire hodgepodge of sets must
+again yield a disjoint union in the gaps of the sets (although further investigation may be necessary...).
+
+\smallskip
+
+\noindent Anyways, we verify the necessary conditions in the order presented:
+
+\begin{enumerate}
+
+\item Follows directly by the definition. 
+
+\item Order the sets in the order presented in the union. If the sets in question
+are disjoint, then they trivially yield a set of type 4. So assume not. Taking any intersection of
+types 1 and 2 yields a set of type 3. Taking any intersection of type 1 and 3 yields a set of type 
+3 again. Taking the intersection of sets 2 and 3 yields again a set of type 3. Finally if we
+take the intersection of any set of type 4 with any other set, we either again get the empty set
+or the other set stays the same (if $\mathbb{R}$ is used).   
+
+\item Complement of set of type 1 is type 2, and vice versa. Complement of a set of type 3 is 
+just a disjoint union of a set of type 1 and a set of type 2. Collections 4 are closed under
+complements.  
+
+\end{enumerate}
+
+\hfill $\Box$
+
+
+\bigskip
+
+\noindent \textbf{Discussion.} 
+
+Not much here, fairly intuitive. In fact this very semi-algebra, the set of intervals in $\mathbb{R}$, was the intuition originally provided to motivate the
+creation of a $\sigma$-algebra via the extension theorem. Just a lot of book-keeping required. 
+
+Note exactly what the collection $\mathcal{J}$ is defined to be here exactly: it is an amalgamation
+of infinite intervals bounded from above by a hard number ($x$, note this type of interval
+is key for the definition of cumulative distribution and the development of more applied theory
+later on), the complement of these types of intervals, *half open intervals* that are open below
+and closed above, and then $\Omega$ and the empty set. This is basically the simplest type
+of semi-algebra that can contain the sets useful for cumulative distribution computation. Not by 
+concidence, this semi-algebra is therefore used to derive the equivalence of measures on 
+*all* borel sets when they are equivalent on all intervals of the type 1 (i.e. when their
+cumulative distributions for any random variable defined as a continous function $\mathbb{R} \to
+\mathbb{R}$ are the same, their distributions must be the same). 
+
+\end{document}
